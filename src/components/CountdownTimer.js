@@ -8,15 +8,16 @@ import {
 } from '@ant-design/icons';
 
 const CountdownTimer = props => {
+  const { color, fontSize, fontFamily } = props;
   const [active, setActive] = useState(false);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
   const styles = {
-    color: 'black',
-    fontSize: '25px',
-    fontFamily: 'monospace',
+    color: color ? color : '#17d4fe',
+    fontSize: fontSize ? fontSize : '25px',
+    fontFamily: fontFamily ? fontFamily : 'monospace',
     width: '60px',
     border: 'none',
     background: 'none',

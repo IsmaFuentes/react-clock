@@ -9,8 +9,7 @@ import {
 
 const Chronometer = props => {
   const { color, fontSize, fontFamily, spacing } = props;
-  const timeDefault = '00:00:00';
-  const [time, setTime] = useState(timeDefault);
+  const [time, setTime] = useState('00:00:00');
   const [active, setActive] = useState(false);
 
   const styles = {
@@ -28,7 +27,7 @@ const Chronometer = props => {
   };
 
   const resetTime = () => {
-    setTime(timeDefault);
+    setTime('00:00:00');
   };
 
   const updateTime = () => {
